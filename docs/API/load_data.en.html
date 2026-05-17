@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-API/load_data.en" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">bcijelly.load_data | BCIJelly</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bcihub.github.io/BCIJelly-site/docs/API/load_data.en"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="zh"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="bcijelly.load_data | BCIJelly"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/BCIJelly-site/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://bcihub.github.io/BCIJelly-site/docs/API/load_data.en"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/docs/API/load_data.en" hreflang="en"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/zh/docs/API/load_data.en" hreflang="zh"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/docs/API/load_data.en" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"bcijelly.load_data","item":"https://bcihub.github.io/BCIJelly-site/docs/API/load_data.en"}]}</script><link rel="alternate" type="application/rss+xml" href="/BCIJelly-site/blog/rss.xml" title="BCIJelly RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/BCIJelly-site/blog/atom.xml" title="BCIJelly Atom Feed"><link rel="stylesheet" href="/BCIJelly-site/assets/css/styles.dc77ca3e.css">
+<script src="/BCIJelly-site/assets/js/runtime~main.757fd1b1.js" defer="defer"></script>
+<script src="/BCIJelly-site/assets/js/main.a6708734.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/BCIJelly-site/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/BCIJelly-site/"><div class="navbar__logo"><img src="/BCIJelly-site/img/logo.png" alt="BCIJelly Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/BCIJelly-site/img/logo.png" alt="BCIJelly Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">BCIJelly</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/BCIJelly-site/docs/datasets/invasive/FALCON-M1-A">Datasets &amp; Models</a><a class="navbar__item navbar__link" href="/BCIJelly-site/docs/intro">Agent</a><a class="navbar__item navbar__link" href="/BCIJelly-site/docs/intro">Chip Deployment</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/BCIJelly-site/docs/API/load_data.en" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li><li><a href="/BCIJelly-site/zh/docs/API/load_data.en" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="zh">中文</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a class="navbar__link" aria-haspopup="true" aria-expanded="false" role="button" href="/BCIJelly-site/docs/API/load_data.en">Latest</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/BCIJelly-site/docs/API/load_data.en">Latest</a></li><li><a class="dropdown__link" href="/BCIJelly-site/docs/1.2.0/intro">v1.2.0</a></li><li><a class="dropdown__link" href="/BCIJelly-site/docs/1.1.0/intro">1.1.0</a></li></ul></div><a href="https://github.com/bcihub/BCIJelly" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/BCIJelly-site/docs/API/load_data.en">API</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/BCIJelly-site/docs/API/load_data.en">bcijelly.load_data</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/BCIJelly-site/docs/API/model.en">bcijelly.model</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/BCIJelly-site/docs/API/model.test.en">bcijelly.model.BaseModel.test</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/BCIJelly-site/docs/API/model.train.en">bcijelly.model.BaseModel.train</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/BCIJelly-site/docs/API/summary.en">bcijelly.summary</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/BCIJelly-site/docs/datasets/invasive/FALCON-M1-A">datasets</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/BCIJelly-site/docs/models/LSTM">models</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/BCIJelly-site/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">API</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">bcijelly.load_data</span></li></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Version: Latest</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>bcijelly.load_data</h1></header>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">def</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">load_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    dataset_name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token operator" style="color:#393A34">*</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    protocol</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;single_day&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    task</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">|</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    split_ratio</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;7:1:2&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subject_index</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">int</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    day_index</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">int</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    seed</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">int</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">|</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">42</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    data_dir</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> Path </span><span class="token operator" style="color:#393A34">|</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    verbose</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">bool</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">False</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    auto_download_missing</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">bool</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">True</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    fallback_to_first_subject</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">bool</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">False</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    repo_id</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> DEFAULT_HF_REPO_ID</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    repo_type</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">str</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> DEFAULT_HF_REPO_TYPE</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    max_days_per_dataset</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token builtin">int</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">|</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">None</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token operator" style="color:#393A34">-</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> DataLoadResult</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p><code>load_data</code> is the unified data-loading API in BCIJelly. It automatically handles:</p>
+<ul>
+<li>Dataset discovery and availability checks (local or auto-download)</li>
+<li>Protocol/task compatibility validation</li>
+<li>Single-day or cross-day job construction</li>
+<li>NPZ reading with task-aware label key selection</li>
+<li>Train/val/test splitting and feature shape alignment</li>
+<li>Unified output as <code>DataLoadResult</code></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="parameters">Parameters<a href="#parameters" class="hash-link" aria-label="Direct link to Parameters" title="Direct link to Parameters">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="dataset_name">dataset_name<a href="#dataset_name" class="hash-link" aria-label="Direct link to dataset_name" title="Direct link to dataset_name">​</a></h4>
+<ul>
+<li>Default: none (required).</li>
+<li>Role: selects which dataset directory to load.</li>
+<li>Impact: determines all downstream discovery, validation, job construction, and file loading branches.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="protocol">protocol<a href="#protocol" class="hash-link" aria-label="Direct link to protocol" title="Direct link to protocol">​</a></h4>
+<ul>
+<li>Default: <code>single_day</code>.</li>
+<li>Supported: <code>single_day</code>, <code>cross_day</code>, <code>train-test</code>, <code>train-val-test</code>.</li>
+<li>Role: defines loading paradigm and split path.</li>
+<li>Key behavior:<!-- -->
+<ul>
+<li><code>train-test</code> and <code>train-val-test</code> run through single-day execution semantics.</li>
+<li><code>cross_day</code> builds day-block train/val/test partitions.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="task">task<a href="#task" class="hash-link" aria-label="Direct link to task" title="Direct link to task">​</a></h4>
+<ul>
+<li>Default: <code>None</code>, then fallback to <code>classification</code>.</li>
+<li>Supported: <code>classification</code>, <code>regression</code>, <code>speech</code>.</li>
+<li>Role: controls label-key selection and label-shape validation.</li>
+<li>Key behavior:<!-- -->
+<ul>
+<li>classification expects <code>(N,)</code> labels.</li>
+<li>regression expects <code>(N,T,2)</code> labels with matching <code>T</code> to neural features.</li>
+<li>speech currently accepts <code>(N,)</code> or <code>(N,L)</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="split_ratio">split_ratio<a href="#split_ratio" class="hash-link" aria-label="Direct link to split_ratio" title="Direct link to split_ratio">​</a></h4>
+<ul>
+<li>Default: <code>7:1:2</code>.</li>
+<li>Role: controls train/val/test ratio.</li>
+<li>Rules:<!-- -->
+<ul>
+<li><code>a:b</code> means train<!-- -->:test<!-- -->.</li>
+<li><code>a:b:c</code> means train:val<!-- -->:test<!-- -->.</li>
+<li>train and test ratios must both be non-zero.</li>
+</ul>
+</li>
+<li>Notes:<!-- -->
+<ul>
+<li>In cross-day, allocation is by day count, not random per-sample split.</li>
+<li>Under <code>train-val-test</code>, explicit val files may be required by dataset format/declaration.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="subject_index">subject_index<a href="#subject_index" class="hash-link" aria-label="Direct link to subject_index" title="Direct link to subject_index">​</a></h4>
+<ul>
+<li>Default: <code>0</code>.</li>
+<li>Role: selects subject subdirectory in multi-subject datasets.</li>
+<li>Notes:<!-- -->
+<ul>
+<li>For non-multi-subject structures, only <code>0</code> is valid.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="day_index">day_index<a href="#day_index" class="hash-link" aria-label="Direct link to day_index" title="Direct link to day_index">​</a></h4>
+<ul>
+<li>Default: <code>0</code>.</li>
+<li>Role: selects which day/session job for single-day loading.</li>
+<li>Notes:<!-- -->
+<ul>
+<li>For split-files format, only <code>day_index=0</code> is valid.</li>
+<li>In cross-day, there is typically one job, so <code>day_index</code> usually stays <code>0</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data_dir">data_dir<a href="#data_dir" class="hash-link" aria-label="Direct link to data_dir" title="Direct link to data_dir">​</a></h4>
+<ul>
+<li>Default: <code>None</code> (internally falls back to <code>data</code>).</li>
+<li>Role: overrides dataset root location.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="auto_download_missing">auto_download_missing<a href="#auto_download_missing" class="hash-link" aria-label="Direct link to auto_download_missing" title="Direct link to auto_download_missing">​</a></h4>
+<ul>
+<li>Default: <code>True</code>.</li>
+<li>Role: auto-downloads missing datasets from Hugging Face.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fallback_to_first_subject">fallback_to_first_subject<a href="#fallback_to_first_subject" class="hash-link" aria-label="Direct link to fallback_to_first_subject" title="Direct link to fallback_to_first_subject">​</a></h4>
+<ul>
+<li>Default: <code>False</code>.</li>
+<li>Role: when <code>subject_index</code> is out of range, fallback to first subject with warning instead of hard error.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="seed">seed<a href="#seed" class="hash-link" aria-label="Direct link to seed" title="Direct link to seed">​</a></h4>
+<ul>
+<li>Default: <code>42</code>.</li>
+<li>Role: controls reproducibility of random splits.</li>
+<li>Key note:<!-- -->
+<ul>
+<li>Optional; when omitted, default value <code>42</code> is used.</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="verbose">verbose<a href="#verbose" class="hash-link" aria-label="Direct link to verbose" title="Direct link to verbose">​</a></h4>
+<ul>
+<li>Default: <code>False</code>.</li>
+<li>Role: prints dataset/job summaries for diagnostics.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="repo_id-repo_type">repo_id, repo_type<a href="#repo_id-repo_type" class="hash-link" aria-label="Direct link to repo_id, repo_type" title="Direct link to repo_id, repo_type">​</a></h4>
+<ul>
+<li>Role: controls download source (defaults to official HF dataset repo).</li>
+<li>Typical use: private mirror/testing repository.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="max_days_per_dataset">max_days_per_dataset<a href="#max_days_per_dataset" class="hash-link" aria-label="Direct link to max_days_per_dataset" title="Direct link to max_days_per_dataset">​</a></h4>
+<ul>
+<li>Role: caps discovered/constructed day count.</li>
+<li>Typical use: fast debugging and reduced-scale experiments.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="usage">Usage<a href="#usage" class="hash-link" aria-label="Direct link to Usage" title="Direct link to Usage">​</a></h2>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> bcijelly </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> bj</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># single-day classification</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">loaded </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> bj</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">load_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    dataset_name</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;1_FALCONM1-A&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    protocol</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;single_day&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> task</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;classification&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subject_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> day_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    split_ratio</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;7:1:2&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># cross-day classification</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">loaded </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> bj</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">load_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    dataset_name</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;1_FALCONM1-A&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    protocol</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;cross_day&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> task</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;classification&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subject_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    split_ratio</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;7:1:2&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># single-day regression</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">loaded </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> bj</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">load_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    dataset_name</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;5_Jango_force&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    protocol</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;single_day&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> task</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;regression&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subject_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> day_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    split_ratio</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;7:1:2&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># cross-day regression</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">loaded </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> bj</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">load_data</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    dataset_name</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;5_Jango_force&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    protocol</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;cross_day&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> task</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;regression&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    subject_index</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">0</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    split_ratio</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;7:1:2&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="execution-logic">Execution Logic<a href="#execution-logic" class="hash-link" aria-label="Direct link to Execution Logic" title="Direct link to Execution Logic">​</a></h2>
+<p>Main flow in <code>src/bcijelly/dataset/_loading.py</code>:</p>
+<ol>
+<li>Parameter and capability checks</li>
+</ol>
+<ul>
+<li>Validate <code>protocol</code> against capability declaration.</li>
+<li>Validate <code>task</code> (or fallback to <code>classification</code>).</li>
+<li>Parse <code>split_ratio</code>.</li>
+</ul>
+<ol start="2">
+<li>Dataset structure discovery</li>
+</ol>
+<ul>
+<li><code>discover_dataset_structure</code> identifies format:<!-- -->
+<ul>
+<li><code>single_file</code></li>
+<li><code>split_files</code></li>
+<li><code>day_files</code></li>
+<li><code>multi_subject</code></li>
+<li><code>virtual_sessions</code> (for VisualGratingTask)</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>Dataset declaration compatibility validation</li>
+</ol>
+<ul>
+<li>If <code>dataset_compatibility.json</code> exists, validate requested protocol/task.</li>
+</ul>
+<ol start="4">
+<li>Subject resolution</li>
+</ol>
+<ul>
+<li>Resolve subject branch via <code>subject_index</code>.</li>
+<li>Out-of-range behavior depends on <code>fallback_to_first_subject</code>.</li>
+</ul>
+<ol start="5">
+<li>Branch A: split_files direct loading</li>
+</ol>
+<ul>
+<li>Fixed train/test (and optional val) file path flow.</li>
+<li><code>train-val-test</code> may require explicit val file.</li>
+</ul>
+<ol start="6">
+<li>Branch B: build jobs then choose one</li>
+</ol>
+<ul>
+<li>Build <code>DatasetJob</code> list via <code>build_jobs</code>.</li>
+<li>For single_day, select by <code>day_index</code>.</li>
+<li>For cross_day, there is usually one constructed job.</li>
+</ul>
+<ol start="7">
+<li>Job-level loading (<code>load_job_data</code>)</li>
+</ol>
+<ul>
+<li>single_day:<!-- -->
+<ul>
+<li>pre-split single-file keys -&gt; direct train/test load.</li>
+<li>raw single-file -&gt; split using <code>split_ratio + seed</code>.</li>
+</ul>
+</li>
+<li>cross_day:<!-- -->
+<ul>
+<li>load train/val/test day blocks.</li>
+<li>align to shared minimal <code>(time, channels)</code> shape.</li>
+<li>return aggregated <code>test_dataset</code> and per-day <code>test_day_datasets</code>.</li>
+</ul>
+</li>
+</ul>
+<ol start="8">
+<li>Return result</li>
+</ol>
+<ul>
+<li>Unified <code>DataLoadResult</code> fields:<!-- -->
+<ul>
+<li><code>train_dataset</code></li>
+<li><code>val_dataset</code> (optional)</li>
+<li><code>test_dataset</code></li>
+<li><code>test_day_datasets</code> (common in cross-day)</li>
+<li><code>aligned_shape</code></li>
+<li><code>job</code></li>
+<li><code>requested_task</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>If you want to dive deeper, start from:</p>
+<ul>
+<li><code>src/bcijelly/dataset/_loading.py</code></li>
+<li><code>src/bcijelly/dataset/_discovery.py</code></li>
+<li><code>src/bcijelly/dataset/_io.py</code></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/BCIJelly-site/docs/API/model.en"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">bcijelly.model</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#parameters" class="table-of-contents__link toc-highlight">Parameters</a></li><li><a href="#usage" class="table-of-contents__link toc-highlight">Usage</a></li><li><a href="#execution-logic" class="table-of-contents__link toc-highlight">Execution Logic</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 BCIJelly, CEBSIT.</div></div></div></footer></div>
+</body>
+</html>
