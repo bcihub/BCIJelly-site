@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhcihub_docs=self.webpackChunkhcihub_docs||[]).push([[3876],{1143:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/BCIJelly-site/zh/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
