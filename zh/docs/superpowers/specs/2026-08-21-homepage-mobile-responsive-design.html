@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-superpowers/specs/2026-08-21-homepage-mobile-responsive-design" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">BCIJelly 首页移动端响应式改造设计 | BCIJelly</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bcihub.github.io/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="BCIJelly 首页移动端响应式改造设计 | BCIJelly"><meta data-rh="true" name="description" content="目标"><meta data-rh="true" property="og:description" content="目标"><link data-rh="true" rel="icon" href="/BCIJelly-site/zh/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://bcihub.github.io/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design" hreflang="en"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design" hreflang="zh"><link data-rh="true" rel="alternate" href="https://bcihub.github.io/BCIJelly-site/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/BCIJelly-site/zh/blog/rss.xml" title="BCIJelly RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/BCIJelly-site/zh/blog/atom.xml" title="BCIJelly Atom Feed">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-M2Bwq2VwM8+Mo5tpw1kN8Xb8yFm1F0VqE4Ww1Bbh+FaUVLR9S5fpEAO2u5P6Hg" crossorigin="anonymous"><link rel="stylesheet" href="/BCIJelly-site/zh/assets/css/styles.beea2f39.css">
+<script src="/BCIJelly-site/zh/assets/js/runtime~main.bc5bf5fa.js" defer="defer"></script>
+<script src="/BCIJelly-site/zh/assets/js/main.b9c9abc5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/BCIJelly-site/zh/img/logo.png"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav aria-label="主导航" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/BCIJelly-site/zh/"><div class="navbar__logo"><img src="/BCIJelly-site/zh/img/logo.png" alt="BCIJelly Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/BCIJelly-site/zh/img/logo.png" alt="BCIJelly Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">脑捷</b></a><a class="navbar__item navbar__link" href="/BCIJelly-site/zh/docs/API/load_data">数据集与模型</a><a class="navbar__item navbar__link" href="/BCIJelly-site/zh/docs/agents/automated architecture search in BCIJelly">智能体</a><a class="navbar__item navbar__link" href="/BCIJelly-site/zh/docs/chip_deployment/Deployment of three additional decoders">芯片部署</a><a class="navbar__item navbar__link" href="/BCIJelly-site/zh/docs/visualization/interactive-visualization">交互式可视化</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>中文</a><ul class="dropdown__menu"><li><a href="/BCIJelly-site/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh">中文</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a class="navbar__link" aria-haspopup="true" aria-expanded="false" role="button" href="/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design">Latest</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/BCIJelly-site/zh/docs/superpowers/specs/2026-08-21-homepage-mobile-responsive-design">Latest</a></li><li><a class="dropdown__link" href="/BCIJelly-site/zh/docs/1.2.0/intro">1.2.0</a></li><li><a class="dropdown__link" href="/BCIJelly-site/zh/docs/1.1.0/intro">1.1.0</a></li></ul></div><a href="https://github.com/bcihub/BCIJelly" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="搜索" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><span class="theme-doc-version-badge badge badge--secondary">版本：Latest</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>BCIJelly 首页移动端响应式改造设计</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="目标">目标<a href="#目标" class="hash-link" aria-label="目标的直接链接" title="目标的直接链接">​</a></h2>
+<p>在不改变桌面版视觉效果和交互行为的前提下，使 BCIJelly 首页及相关文档正文能够在宽度不超过 996px 的平板和手机上正常显示。改造必须消除横向溢出，保证中英文内容可读，并保留现有五个首页区块、导航、链接和翻译逻辑。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="成功标准">成功标准<a href="#成功标准" class="hash-link" aria-label="成功标准的直接链接" title="成功标准的直接链接">​</a></h2>
+<ul>
+<li>视口宽度大于 996px 时，Hero、About、Features、Team 和 Footer 与改造前保持相同位置、尺寸和视觉层级。</li>
+<li>360px、390px、768px 和 996px 宽度下，中文和英文首页均无页面级横向滚动。</li>
+<li>移动端导航、功能标签切换、教程链接、语言切换和首页下滑锚点均可使用。</li>
+<li>文档页桌面正文仍保持当前 <code>max-width: 85%</code>，移动端正文恢复为 <code>100%</code>。</li>
+<li>Docusaurus production build 成功完成。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="已确认的视觉选择">已确认的视觉选择<a href="#已确认的视觉选择" class="hash-link" aria-label="已确认的视觉选择的直接链接" title="已确认的视觉选择的直接链接">​</a></h2>
+<ol>
+<li>Hero：采用移动端重新组合方案。保留现有大脑主体图，用渐变遮住原图内会被裁断的烘焙文字，并用可换行、可翻译的 HTML 文本重新呈现标题和机构名称。</li>
+<li>About：采用“图片在上、正文在下”的移动端结构。</li>
+<li>Features：采用横向滑动标签；功能内容改为“配图、标题与描述、教程按钮”的单列顺序。</li>
+<li>Team：手机采用两列网格，第七位成员居中；平板根据宽度使用三至四列。</li>
+<li>Footer：Logo 使用 2×2 网格，链接和版权信息使用单列，联系方式逐行显示。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="实现策略">实现策略<a href="#实现策略" class="hash-link" aria-label="实现策略的直接链接" title="实现策略的直接链接">​</a></h2>
+<p>采用“语义化 class + CSS 媒体查询”方案。首页中的布局型内联样式迁入 <code>src/css/custom.css</code>，桌面基础规则复制当前有效值，移动端规则仅写在最大宽度媒体查询中。</p>
+<p>不采用以下方案：</p>
+<ul>
+<li>不使用大量 <code>!important</code> 覆盖现有内联样式，因为其优先级关系脆弱，后续难以维护。</li>
+<li>不创建一套独立的移动端首页组件，因为这会复制五个区块的结构、翻译和链接逻辑。</li>
+<li>不使用 JavaScript 读取视口宽度，避免 Docusaurus SSR 水合差异。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="文件与职责">文件与职责<a href="#文件与职责" class="hash-link" aria-label="文件与职责的直接链接" title="文件与职责的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="srcpagesindexjs"><code>src/pages/index.js</code><a href="#srcpagesindexjs" class="hash-link" aria-label="srcpagesindexjs的直接链接" title="srcpagesindexjs的直接链接">​</a></h3>
+<ul>
+<li>在首页主节点增加 <code>.home-page</code>，并根据语言增加 <code>.home-page--en</code> 或 <code>.home-page--zh</code>。</li>
+<li>为 Hero、About、Features、Team 和 Footer 中的布局容器增加语义化 class。</li>
+<li>将 <code>height</code>、<code>display</code>、<code>flex</code>、<code>gap</code>、<code>margin-left</code>、宽度、字号和区块间距等布局型内联样式迁入 CSS。</li>
+<li>保留翻译调用、功能数据、<code>activeTab</code> 状态、图片引用和链接行为。</li>
+<li>将 Footer 联系信息拆为独立 <code>&lt;span&gt;</code>，桌面横排、移动端逐行。</li>
+<li>不修改站点导航项目和文档数据。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="srccsscustomcss"><code>src/css/custom.css</code><a href="#srccsscustomcss" class="hash-link" aria-label="srccsscustomcss的直接链接" title="srccsscustomcss的直接链接">​</a></h3>
+<ul>
+<li>所有首页新规则限定在 <code>.home-page</code> 下，避免影响文档主题。</li>
+<li>桌面基础样式使用当前页面实际生效的数值，不重新设计桌面端。</li>
+<li>使用以下响应式层级：<!-- -->
+<ul>
+<li><code>@media (max-width: 996px)</code>：Docusaurus 导航折叠临界点和平板布局。</li>
+<li><code>@media (max-width: 768px)</code>：手机主体布局。</li>
+<li><code>@media (max-width: 480px)</code>：小屏字号、间距和成员卡片微调。</li>
+</ul>
+</li>
+<li>添加 <code>prefers-reduced-motion</code> 规则，减少 Features 图片切换位移动画。</li>
+<li>文档正文的 85% 宽度只在移动端覆盖为 100%。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="i18nencodejson-与-i18nzhcodejson"><code>i18n/en/code.json</code> 与 <code>i18n/zh/code.json</code><a href="#i18nencodejson-与-i18nzhcodejson" class="hash-link" aria-label="i18nencodejson-与-i18nzhcodejson的直接链接" title="i18nencodejson-与-i18nzhcodejson的直接链接">​</a></h3>
+<ul>
+<li>新增移动端 Hero 标题和机构名称翻译键。</li>
+<li>不覆盖或重写现有翻译。</li>
+<li>实施时必须保留当前工作区中 <code>i18n/en/code.json</code> 的未提交改动，包括团队职称文本。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="docusaurusconfigjs"><code>docusaurus.config.js</code><a href="#docusaurusconfigjs" class="hash-link" aria-label="docusaurusconfigjs的直接链接" title="docusaurusconfigjs的直接链接">​</a></h3>
+<p>本次不修改。Docusaurus 的默认移动端导航折叠行为继续在 996px 生效。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="srcpagesindexmodulecss"><code>src/pages/index.module.css</code><a href="#srcpagesindexmodulecss" class="hash-link" aria-label="srcpagesindexmodulecss的直接链接" title="srcpagesindexmodulecss的直接链接">​</a></h3>
+<p>该文件未被 <code>index.js</code> 引用。实施时删除，避免残留无效媒体查询造成维护误解；删除不会改变现有页面输出。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="区块详细设计">区块详细设计<a href="#区块详细设计" class="hash-link" aria-label="区块详细设计的直接链接" title="区块详细设计的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hero">Hero<a href="#hero" class="hash-link" aria-label="Hero的直接链接" title="Hero的直接链接">​</a></h3>
+<p>桌面端继续使用当前 <code>100vh</code> 横向图片、底部 SVG 圆弧和下滑链接。</p>
+<p>移动端：</p>
+<ul>
+<li>高度改用稳定的 <code>svh</code> 计算，并设置合理最小高度，避免移动浏览器地址栏引发跳动。</li>
+<li>原图使用 <code>object-fit: cover</code> 聚焦大脑主体，但在下半部分叠加由透明到浅蓝背景的渐变，完全遮住被裁切的原图文字。</li>
+<li>渐变区域上渲染新的中英文 HTML 标题和机构名称。</li>
+<li>保留底部圆弧与下滑链接，并缩小其高度和字号以适应窄屏。</li>
+<li>图片加载失败时保留浅蓝背景和可访问的 <code>alt</code> 文本。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="about">About<a href="#about" class="hash-link" aria-label="About的直接链接" title="About的直接链接">​</a></h3>
+<p>桌面端继续保持背景大脑位于左侧、正文位于右侧。</p>
+<p>移动端：</p>
+<ul>
+<li>取消 <code>margin-left: 40rem</code>、固定大宽度和 <code>min-height: 900px</code>。</li>
+<li>背景图在区块顶部显示为独立视觉区域，聚焦脑图主体。</li>
+<li>正文位于其下方的深色区域，宽度为容器宽度，左右安全间距约 20px。</li>
+<li>标题、段落和粗体颜色沿用当前设计，并允许中英文自然换行。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Features的直接链接" title="Features的直接链接">​</a></h3>
+<p>桌面端继续保持标签横排、左文右图。</p>
+<p>移动端：</p>
+<ul>
+<li>标签容器启用原生横向滚动、单行显示和滚动吸附，并隐藏视觉滚动条。</li>
+<li>标签与操作按钮的触控高度不低于 44px。</li>
+<li>内容容器切为单列，图片通过 CSS <code>order</code> 放在正文之前。</li>
+<li>图片宽度限制为容器的 100%，取消桌面的 120% 放大和 40px 横移。</li>
+<li>标题、描述和按钮不使用固定高度；长英文允许自然换行。</li>
+<li><code>activeTab</code> 状态和淡入动画逻辑保持不变。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team">Team<a href="#team" class="hash-link" aria-label="Team的直接链接" title="Team的直接链接">​</a></h3>
+<p>桌面端继续显示上排三人居中、下排四人。</p>
+<p>移动端：</p>
+<ul>
+<li>在不复制成员数据的前提下，将两个成员行作为一个视觉网格处理。</li>
+<li>手机显示两列，第七张卡片跨两列区域并以半宽居中。</li>
+<li>平板根据可用宽度显示三至四列。</li>
+<li>卡片保持当前图片比例、圆角和文字覆盖层。</li>
+<li>姓名与职称字号使用受限的响应式值，避免英文覆盖或溢出。</li>
+<li>触屏设备不依赖 hover 才能看到成员信息。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="footer">Footer<a href="#footer" class="hash-link" aria-label="Footer的直接链接" title="Footer的直接链接">​</a></h3>
+<p>桌面端继续保持四个 Logo 横排、两列文字和单行联系方式。</p>
+<p>移动端：</p>
+<ul>
+<li>Logo 容器切为两列网格，共两行。</li>
+<li>超级链接和版权说明依次单列排列，并取消语言相关的固定左偏移和固定 flex 宽度。</li>
+<li>联系方式的独立 <code>&lt;span&gt;</code> 逐行显示，不再依赖多个不换行空格分隔。</li>
+<li>蓝色联系条与默认版权条均限制文本宽度并允许安全换行。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="navbar-与文档页">Navbar 与文档页<a href="#navbar-与文档页" class="hash-link" aria-label="Navbar 与文档页的直接链接" title="Navbar 与文档页的直接链接">​</a></h3>
+<ul>
+<li>Navbar 沿用 Docusaurus 默认折叠菜单，只增加防止标题或控件撑宽页面的移动端约束。</li>
+<li>不修改导航项目、版本选择、语言选择或 GitHub 链接。</li>
+<li>文档页的当前 85% 宽度规则在桌面保持不变；最大宽度 996px 时覆盖为 100%。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="状态错误和可访问性">状态、错误和可访问性<a href="#状态错误和可访问性" class="hash-link" aria-label="状态、错误和可访问性的直接链接" title="状态、错误和可访问性的直接链接">​</a></h2>
+<ul>
+<li>页面唯一局部交互状态仍为 Features 的 <code>activeTab</code>，响应式布局不新增状态。</li>
+<li>不访问 <code>window</code> 或依赖客户端首次渲染尺寸。</li>
+<li>所有可点击标签和按钮保留键盘可操作性与可见焦点。</li>
+<li>现有图片 <code>alt</code> 文本保留；新增的装饰性渐变不进入可访问性树。</li>
+<li>中英文文本不设固定内容高度，避免翻译长度变化导致裁切。</li>
+<li>页面任何宽度均不使用 <code>overflow-x: hidden</code> 掩盖布局错误；横向滚动仅限 Features 标签容器。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="验证计划">验证计划<a href="#验证计划" class="hash-link" aria-label="验证计划的直接链接" title="验证计划的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="自动与构建检查">自动与构建检查<a href="#自动与构建检查" class="hash-link" aria-label="自动与构建检查的直接链接" title="自动与构建检查的直接链接">​</a></h3>
+<ul>
+<li>运行 Docusaurus production build，确认中英文资源、链接和 CSS 均可编译。</li>
+<li>在各目标宽度检查：
+<code>document.documentElement.scrollWidth === document.documentElement.clientWidth</code>。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="视觉检查">视觉检查<a href="#视觉检查" class="hash-link" aria-label="视觉检查的直接链接" title="视觉检查的直接链接">​</a></h3>
+<p>中文和英文分别检查：</p>
+<ul>
+<li>360×800</li>
+<li>390×844</li>
+<li>768×1024</li>
+<li>996×适当高度</li>
+</ul>
+<p>桌面回归检查：</p>
+<ul>
+<li>1024×768</li>
+<li>1440×900</li>
+<li>1920×1080</li>
+</ul>
+<p>实施前后对同尺寸桌面截图进行对比。任何大于 996px 的区块位置、尺寸、间距或图片裁切变化都视为回归并必须修正。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="交互检查">交互检查<a href="#交互检查" class="hash-link" aria-label="交互检查的直接链接" title="交互检查的直接链接">​</a></h3>
+<ul>
+<li>Docusaurus 移动端导航展开和关闭。</li>
+<li>中文与英文语言切换。</li>
+<li>Hero 下滑锚点。</li>
+<li>四个 Features 标签切换及横向滑动。</li>
+<li>教程链接与外部链接。</li>
+<li>Team 姓名和职称在触屏及桌面上的可读性。</li>
+<li>首页 Footer 和 Docusaurus 默认版权区的换行。</li>
+<li>至少一个中文和一个英文文档页在手机与桌面宽度下的正文布局。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="非目标">非目标<a href="#非目标" class="hash-link" aria-label="非目标的直接链接" title="非目标的直接链接">​</a></h2>
+<ul>
+<li>不重新设计桌面首页。</li>
+<li>不修改导航信息架构、文档内容、团队数据或功能文案。</li>
+<li>不调整站点 <code>baseUrl</code>、部署配置或版本配置。</li>
+<li>不引入新的 UI、轮播或响应式工具依赖。</li>
+<li>不重构与首页移动端兼容无关的文档样式。</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="风险控制">风险控制<a href="#风险控制" class="hash-link" aria-label="风险控制的直接链接" title="风险控制的直接链接">​</a></h2>
+<ul>
+<li>最大风险是迁移内联样式时改变桌面优先级或遗漏语言差异。实施时先复制当前有效值，再增加移动端覆盖，并通过桌面截图对比验收。</li>
+<li>Hero 原图包含烘焙文字。移动端渐变必须在 360px 和 996px 两端都完全遮住原图文字，避免与 HTML 文案重叠。</li>
+<li>Team 当前由两行独立 DOM 组成。移动端合并视觉网格时必须确保桌面行结构和成员顺序不变。</li>
+<li>工作区已有 <code>i18n/en/code.json</code> 未提交修改。实施和提交必须只包含明确需要的新增翻译，不能丢失或覆盖用户改动。</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="文件选项卡"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#目标" class="table-of-contents__link toc-highlight">目标</a></li><li><a href="#成功标准" class="table-of-contents__link toc-highlight">成功标准</a></li><li><a href="#已确认的视觉选择" class="table-of-contents__link toc-highlight">已确认的视觉选择</a></li><li><a href="#实现策略" class="table-of-contents__link toc-highlight">实现策略</a></li><li><a href="#文件与职责" class="table-of-contents__link toc-highlight">文件与职责</a><ul><li><a href="#srcpagesindexjs" class="table-of-contents__link toc-highlight"><code>src/pages/index.js</code></a></li><li><a href="#srccsscustomcss" class="table-of-contents__link toc-highlight"><code>src/css/custom.css</code></a></li><li><a href="#i18nencodejson-与-i18nzhcodejson" class="table-of-contents__link toc-highlight"><code>i18n/en/code.json</code> 与 <code>i18n/zh/code.json</code></a></li><li><a href="#docusaurusconfigjs" class="table-of-contents__link toc-highlight"><code>docusaurus.config.js</code></a></li><li><a href="#srcpagesindexmodulecss" class="table-of-contents__link toc-highlight"><code>src/pages/index.module.css</code></a></li></ul></li><li><a href="#区块详细设计" class="table-of-contents__link toc-highlight">区块详细设计</a><ul><li><a href="#hero" class="table-of-contents__link toc-highlight">Hero</a></li><li><a href="#about" class="table-of-contents__link toc-highlight">About</a></li><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li><li><a href="#team" class="table-of-contents__link toc-highlight">Team</a></li><li><a href="#footer" class="table-of-contents__link toc-highlight">Footer</a></li><li><a href="#navbar-与文档页" class="table-of-contents__link toc-highlight">Navbar 与文档页</a></li></ul></li><li><a href="#状态错误和可访问性" class="table-of-contents__link toc-highlight">状态、错误和可访问性</a></li><li><a href="#验证计划" class="table-of-contents__link toc-highlight">验证计划</a><ul><li><a href="#自动与构建检查" class="table-of-contents__link toc-highlight">自动与构建检查</a></li><li><a href="#视觉检查" class="table-of-contents__link toc-highlight">视觉检查</a></li><li><a href="#交互检查" class="table-of-contents__link toc-highlight">交互检查</a></li></ul></li><li><a href="#非目标" class="table-of-contents__link toc-highlight">非目标</a></li><li><a href="#风险控制" class="table-of-contents__link toc-highlight">风险控制</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
